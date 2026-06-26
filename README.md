@@ -67,6 +67,9 @@ npx serve .
 npm test             # 21 tests in 4 suites
 ```
 
+> **Windows (PowerShell):** run `wsl npm test`.  
+> **WSL / macOS / Linux:** run `npm test` directly.
+
 ## 📄 License
 
 MIT
