@@ -1,24 +1,26 @@
-# 🐾 Wildpedia — Enciclopedia de Animales
+[🇬🇧 English](README.md) | [🇪🇸 Español](README.es.md)
 
-Explorador visual del reino animal con buscador, filtros, favoritos y modo oscuro.  
-Proyecto frontend **vanilla** (sin frameworks, sin build tools).
+# 🐾 Wildpedia — Animal Encyclopedia
 
-## ✨ Características
+Visual explorer of the animal kingdom with search, filters, favorites, and dark mode.  
+**Vanilla** frontend project (no frameworks, no build tools).
 
-| Funcionalidad | Detalle |
+## ✨ Features
+
+| Feature | Detail |
 |---|---|
-| 🔍 **Buscador en tiempo real** | Filtra 16 animales por nombre mientras escribes |
-| 🏷️ **Filtros por categoría** | Mamíferos, Aves, Reptiles, Acuáticos + Favoritos |
-| ❤️ **Favoritos persistentes** | Guarda en localStorage, sección dedicada |
-| 🌙 **Modo oscuro** | Persiste en localStorage |
-| 🌐 **Idioma ES/EN** | Traducción completa, persiste en localStorage |
-| 🎲 **Animal aleatorio** | Modal sorpresa con un clic |
-| 📱 **Responsive** | 3 breakpoints: desktop, tablet, móvil |
-| 🎬 **Animaciones** | Fade-in con IntersectionObserver, contadores animados |
+| 🔍 **Real-time search** | Filters 16 animals by name as you type |
+| 🏷️ **Category filters** | Mammals, Birds, Reptiles, Aquatic + Favorites |
+| ❤️ **Persistent favorites** | Saved in localStorage, dedicated section |
+| 🌙 **Dark mode** | Persists in localStorage |
+| 🌐 **ES/EN language** | Full translation, persists in localStorage |
+| 🎲 **Random animal** | Surprise modal with one click |
+| 📱 **Responsive** | 3 breakpoints: desktop, tablet, mobile |
+| 🎬 **Animations** | Fade-in with IntersectionObserver, animated counters |
 
-## 🚀 Vista previa
+## 🚀 Preview
 
-Abrir directo en el navegador:
+Open directly in the browser:
 
 ```sh
 explorer.exe index.html        # Windows (WSL)
@@ -26,45 +28,45 @@ open index.html                # macOS
 xdg-open index.html            # Linux
 ```
 
-O con servidor local:
+Or with a local server:
 
 ```sh
 npx serve .
 ```
 
-## 🗂️ Estructura
+## 🗂️ Structure
 
 ```
-├── index.html       # HTML semántico con data-i18n
-├── styles.css       # CSS variables, modo oscuro, responsive
-├── script.js        # Lógica: buscador, filtros, favoritos, i18n, modal
-├── tests/           # Tests con Node test runner + linkedom
+├── index.html       # Semantic HTML with data-i18n
+├── styles.css       # CSS variables, dark mode, responsive
+├── script.js        # Logic: search, filters, favorites, i18n, modal
+├── tests/           # Tests with Node test runner + linkedom
 │   ├── helpers.js   # DOM setup (linkedom), mocks
 │   ├── i18n.test.js
 │   ├── favorites.test.js
 │   ├── search.test.js
 │   └── theme.test.js
 ├── package.json
-└── AGENTS.md        # Instrucciones para OpenCode
+└── AGENTS.md        # Instructions for OpenCode
 ```
 
-## 🧠 Lo que demuestra
+## 🧠 What it demonstrates
 
-- **Manipulación del DOM** — creación dinámica de modales, clonado de nodos
-- **Eventos** — delegación, propagación, formularios en tiempo real
-- **APIs del navegador** — `localStorage`, `IntersectionObserver`, `requestAnimationFrame`
-- **CSS moderno** — variables, `backdrop-filter`, `object-fit`, transiciones
-- **Patrón i18n** — objeto de traducciones con fallback
-- **UX** — feedback visual (toast), estados vacíos, persistencia de preferencias
+- **DOM manipulation** — dynamic modals, node cloning
+- **Events** — delegation, propagation, real-time form input
+- **Browser APIs** — `localStorage`, `IntersectionObserver`, `requestAnimationFrame`
+- **Modern CSS** — variables, `backdrop-filter`, `object-fit`, transitions
+- **i18n pattern** — translation object with fallback
+- **UX** — visual feedback (toast), empty states, preference persistence
 
 ## 📦 Stack
 
 `HTML5` · `CSS3` · `JavaScript (ES6+)` · Tests: `node --test` + `linkedom`
 
 ```sh
-npm test             # 21 tests en 4 suites
+npm test             # 21 tests in 4 suites
 ```
 
-## 📄 Licencia
+## 📄 License
 
 MIT
