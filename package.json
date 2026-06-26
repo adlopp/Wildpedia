@@ -1,0 +1,17 @@
+{
+  "name": "wildpedia",
+  "version": "1.0.0",
+  "description": "Explorador visual del reino animal con buscador, filtros, favoritos y modo oscuro. Proyecto frontend vanilla.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:watch": "node --test --watch tests/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "linkedom": "^0.18.12"
+  }
+}
