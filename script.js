@@ -533,10 +533,11 @@ function buildCardElement(key) {
     const card = document.createElement('article');
     card.className = 'animal-card';
     card.dataset.animal = key;
+    const imgHtml = data.img ? `<img src="${data.img.replace('w=600&h=400', 'w=400&h=300')}" alt="${name}" loading="lazy">` : '';
     card.innerHTML = `
         <button class="fav-btn" data-animal="${key}" aria-label="Añadir a favoritos">♡</button>
         <div class="card-image" style="background:linear-gradient(135deg,${randomGradient()})">
-            <img src="${(data.img || '').replace('w=600&h=400', 'w=400&h=300')}" alt="${name}" loading="lazy">
+            ${imgHtml}
         </div>
         <div class="card-body">
             <h3>${name}</h3>
