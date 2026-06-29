@@ -100,7 +100,7 @@ const i18n = {
         'curiosity.4.desc': 'La medusa Turritopsis dohrnii es considerada "biológicamente inmortal" al poder revertir su ciclo de vida.',
         'footer.desc': 'Explorando la diversidad de la vida en la Tierra.',
         'footer.categories': 'Categorías',
-        'footer.copyright': '© 2026 Wildpedia. Hecho con ❤️ para los amantes de la naturaleza.',
+        'footer.copyright': '© 2026 Wildpedia. Hecho con ❤️ por @adlopp para los amantes de la naturaleza.',
         'toast.added': '❤️ Añadido a favoritos',
         'toast.removed': '💔 Eliminado de favoritos',
         'modal.habitat': 'Hábitat', 'modal.dieta': 'Dieta', 'modal.vida': 'Esperanza de vida',
@@ -110,6 +110,42 @@ const i18n = {
         'wiki.loading': 'Buscando en Wikipedia…',
         'wiki.error': 'No se encontró un dato de animal. ¡Intenta de nuevo!',
         'modal.wiki': 'Leer en Wikipedia',
+        'load_more': 'Cargar más',
+        'load_more_loading': 'Cargando…',
+        'animal.elefante.name': 'Elefante', 'animal.elefante.desc': 'El animal terrestre más grande, conocido por su inteligencia y memoria.', 'animal.elefante.habitat': 'Sabanas y bosques', 'animal.elefante.dieta': 'Herbívoro', 'animal.elefante.vida': '60-70 años',
+        'animal.perro.name': 'Perro', 'animal.perro.desc': 'El mejor amigo del hombre, domesticado hace más de 15,000 años.', 'animal.perro.habitat': 'Doméstico', 'animal.perro.dieta': 'Omnívoro', 'animal.perro.vida': '10-15 años',
+        'animal.gato.name': 'Gato', 'animal.gato.desc': 'Felino doméstico ágil y curioso, venerado en culturas antiguas.', 'animal.gato.habitat': 'Doméstico', 'animal.gato.dieta': 'Carnívoro', 'animal.gato.vida': '12-18 años',
+        'animal.caballo.name': 'Caballo', 'animal.caballo.desc': 'Mamífero herbívoro domesticado que ha acompañado al ser humano por milenios.', 'animal.caballo.habitat': 'Praderas y llanuras', 'animal.caballo.dieta': 'Herbívoro', 'animal.caballo.vida': '25-30 años',
+        'animal.oso_polar.name': 'Oso Polar', 'animal.oso_polar.desc': 'El carnívoro terrestre más grande, perfectamente adaptado al hielo ártico.', 'animal.oso_polar.habitat': 'Ártico', 'animal.oso_polar.dieta': 'Carnívoro', 'animal.oso_polar.vida': '25-30 años',
+        'animal.jirafa.name': 'Jirafa', 'animal.jirafa.desc': 'El animal más alto del mundo, con un cuello que puede alcanzar los 2 metros.', 'animal.jirafa.habitat': 'Sabanas africanas', 'animal.jirafa.dieta': 'Herbívoro', 'animal.jirafa.vida': '20-25 años',
+        'animal.canguro.name': 'Canguro', 'animal.canguro.desc': 'Marsupial australiano que se desplaza dando grandes saltos.', 'animal.canguro.habitat': 'Australia', 'animal.canguro.dieta': 'Herbívoro', 'animal.canguro.vida': '6-8 años',
+        'animal.chimpance.name': 'Chimpancé', 'animal.chimpance.desc': 'El primate más cercano al ser humano, con el que comparte el 98% del ADN.', 'animal.chimpance.habitat': 'Selvas africanas', 'animal.chimpance.dieta': 'Omnívoro', 'animal.chimpance.vida': '40-50 años',
+        'animal.zorro.name': 'Zorro', 'animal.zorro.desc': 'Cánido astuto y adaptable, presente en casi todos los continentes.', 'animal.zorro.habitat': 'Bosques y tundra', 'animal.zorro.dieta': 'Carnívoro', 'animal.zorro.vida': '3-6 años',
+        'animal.ciervo.name': 'Ciervo', 'animal.ciervo.desc': 'Mamífero elegante con astas ramificadas que se renuevan cada año.', 'animal.ciervo.habitat': 'Bosques templados', 'animal.ciervo.dieta': 'Herbívoro', 'animal.ciervo.vida': '10-20 años',
+        'animal.gorrion.name': 'Gorrión', 'animal.gorrion.desc': 'Pequeña ave urbana que se ha adaptado perfectamente a la vida en ciudades.', 'animal.gorrion.habitat': 'Zonas urbanas y rurales', 'animal.gorrion.dieta': 'Omnívoro', 'animal.gorrion.vida': '3-5 años',
+        'animal.pinguino.name': 'Pingüino', 'animal.pinguino.desc': 'Ave no voladora perfectamente adaptada a la vida marina en el hemisferio sur.', 'animal.pinguino.habitat': 'Antártida y costas frías', 'animal.pinguino.dieta': 'Carnívoro', 'animal.pinguino.vida': '15-20 años',
+        'animal.loro.name': 'Loro', 'animal.loro.desc': 'Ave tropical conocida por su capacidad de imitar sonidos y su plumaje colorido.', 'animal.loro.habitat': 'Selvas tropicales', 'animal.loro.dieta': 'Frugívoro', 'animal.loro.vida': '30-50 años',
+        'animal.paloma.name': 'Paloma', 'animal.paloma.desc': 'Ave domesticada desde la antigüedad, símbolo de paz y mensajera.', 'animal.paloma.habitat': 'Ciudades y campos', 'animal.paloma.dieta': 'Granívoro', 'animal.paloma.vida': '3-5 años',
+        'animal.pavo_real.name': 'Pavo Real', 'animal.pavo_real.desc': 'Famoso por su espectacular plumaje con ocelos irisados.', 'animal.pavo_real.habitat': 'Bosques del sur de Asia', 'animal.pavo_real.dieta': 'Omnívoro', 'animal.pavo_real.vida': '15-20 años',
+        'animal.ciguena.name': 'Cigüeña', 'animal.ciguena.desc': 'Ave migratoria de largas patas asociada a la llegada de la primavera.', 'animal.ciguena.habitat': 'Humedales y campos', 'animal.ciguena.dieta': 'Carnívoro', 'animal.ciguena.vida': '20-30 años',
+        'animal.cuervo.name': 'Cuervo', 'animal.cuervo.desc': 'Una de las aves más inteligentes, capaz de usar herramientas y resolver problemas.', 'animal.cuervo.habitat': 'Bosques y montañas', 'animal.cuervo.dieta': 'Omnívoro', 'animal.cuervo.vida': '10-15 años',
+        'animal.avestruz.name': 'Avestruz', 'animal.avestruz.desc': 'El ave más grande del mundo, corre a gran velocidad pero no puede volar.', 'animal.avestruz.habitat': 'Sabanas africanas', 'animal.avestruz.dieta': 'Herbívoro', 'animal.avestruz.vida': '30-40 años',
+        'animal.iguana.name': 'Iguana', 'animal.iguana.desc': 'Lagarto herbívoro de gran tamaño con una distintiva cresta dorsal.', 'animal.iguana.habitat': 'Selvas tropicales', 'animal.iguana.dieta': 'Herbívoro', 'animal.iguana.vida': '15-20 años',
+        'animal.serpiente_cascabel.name': 'Serpiente de Cascabel', 'animal.serpiente_cascabel.desc': 'Víbora venenosa con un sonajero en la cola que usa como advertencia.', 'animal.serpiente_cascabel.habitat': 'Desiertos y matorrales', 'animal.serpiente_cascabel.dieta': 'Carnívoro', 'animal.serpiente_cascabel.vida': '10-20 años',
+        'animal.lagartija.name': 'Lagartija', 'animal.lagartija.desc': 'Pequeño reptil ágil y veloz que habita en muros y jardines.', 'animal.lagartija.habitat': 'Roquedales y jardines', 'animal.lagartija.dieta': 'Insectívoro', 'animal.lagartija.vida': '3-5 años',
+        'animal.dragon_komodo.name': 'Dragón de Komodo', 'animal.dragon_komodo.desc': 'El lagarto más grande del mundo, depredador letal de las islas indonesias.', 'animal.dragon_komodo.habitat': 'Islas de Indonesia', 'animal.dragon_komodo.dieta': 'Carnívoro', 'animal.dragon_komodo.vida': '30-50 años',
+        'animal.caiman.name': 'Caimán', 'animal.caiman.desc': 'Reptil emparentado con el cocodrilo, presente en ríos y pantanos americanos.', 'animal.caiman.habitat': 'Ríos y pantanos', 'animal.caiman.dieta': 'Carnívoro', 'animal.caiman.vida': '30-40 años',
+        'animal.gecko.name': 'Gecko', 'animal.gecko.desc': 'Pequeño lagarto con almohadillas adhesivas que trepa por cualquier superficie.', 'animal.gecko.habitat': 'Selvas y zonas rocosas', 'animal.gecko.dieta': 'Insectívoro', 'animal.gecko.vida': '5-10 años',
+        'animal.boa.name': 'Boa Constrictora', 'animal.boa.desc': 'Serpiente no venenosa que mata por constricción, apretando a sus presas.', 'animal.boa.habitat': 'Selvas tropicales', 'animal.boa.dieta': 'Carnívoro', 'animal.boa.vida': '20-30 años',
+        'animal.monstruo_gila.name': 'Monstruo de Gila', 'animal.monstruo_gila.desc': 'Un lagarto venenoso de llamativos colores naranja y negro.', 'animal.monstruo_gila.habitat': 'Desiertos de Norteamérica', 'animal.monstruo_gila.dieta': 'Carnívoro', 'animal.monstruo_gila.vida': '20-30 años',
+        'animal.falsa_coral.name': 'Falsa Coral', 'animal.falsa_coral.desc': 'Serpiente inofensiva que imita los colores de la coral venenosa.', 'animal.falsa_coral.habitat': 'Selvas tropicales', 'animal.falsa_coral.dieta': 'Carnívoro', 'animal.falsa_coral.vida': '10-15 años',
+        'animal.ballena_azul.name': 'Ballena Azul', 'animal.ballena_azul.desc': 'El animal más grande que jamás haya existido en la Tierra.', 'animal.ballena_azul.habitat': 'Océanos abiertos', 'animal.ballena_azul.dieta': 'Carnívoro', 'animal.ballena_azul.vida': '80-90 años',
+        'animal.orca.name': 'Orca', 'animal.orca.desc': 'Depredador marino inteligente que caza en grupo como los lobos.', 'animal.orca.habitat': 'Océanos de todo el mundo', 'animal.orca.dieta': 'Carnívoro', 'animal.orca.vida': '50-80 años',
+        'animal.caballito_mar.name': 'Caballito de Mar', 'animal.caballito_mar.desc': 'Pez marino único donde el macho incuba los huevos en una bolsa.', 'animal.caballito_mar.habitat': 'Arrecifes de coral', 'animal.caballito_mar.dieta': 'Carnívoro', 'animal.caballito_mar.vida': '1-5 años',
+        'animal.mantarraya.name': 'Mantarraya', 'animal.mantarraya.desc': 'Raya gigante que puede alcanzar 7 metros de envergadura.', 'animal.mantarraya.habitat': 'Océanos tropicales', 'animal.mantarraya.dieta': 'Carnívoro', 'animal.mantarraya.vida': '20-30 años',
+        'animal.calamar_gigante.name': 'Calamar Gigante', 'animal.calamar_gigante.desc': 'Molusco de las profundidades, fuente de leyendas sobre monstruos marinos.', 'animal.calamar_gigante.habitat': 'Océanos profundos', 'animal.calamar_gigante.dieta': 'Carnívoro', 'animal.calamar_gigante.vida': '3-5 años',
+        'animal.estrella_mar.name': 'Estrella de Mar', 'animal.estrella_mar.desc': 'Equinodermo con cinco brazos capaz de regenerar extremidades perdidas.', 'animal.estrella_mar.habitat': 'Fondos marinos', 'animal.estrella_mar.dieta': 'Carnívoro', 'animal.estrella_mar.vida': '5-35 años',
+        'animal.cangrejo.name': 'Cangrejo', 'animal.cangrejo.desc': 'Crustáceo con caparazón duro que camina de lado y vive en costas y mares.', 'animal.cangrejo.habitat': 'Costas y fondos marinos', 'animal.cangrejo.dieta': 'Omnívoro', 'animal.cangrejo.vida': '3-10 años',
     },
     en: {
         'page.title': 'Wildpedia - Animal Encyclopedia',
@@ -193,7 +229,7 @@ const i18n = {
         'curiosity.4.desc': 'The Turritopsis dohrnii jellyfish is considered "biologically immortal" as it can reverse its life cycle.',
         'footer.desc': 'Exploring the diversity of life on Earth.',
         'footer.categories': 'Categories',
-        'footer.copyright': '© 2026 Wildpedia. Made with ❤️ for nature lovers.',
+        'footer.copyright': '© 2026 Wildpedia. Made with ❤️ by @adlopp for nature lovers.',
         'toast.added': '❤️ Added to favorites',
         'toast.removed': '💔 Removed from favorites',
         'modal.habitat': 'Habitat', 'modal.dieta': 'Diet', 'modal.vida': 'Lifespan',
@@ -203,6 +239,42 @@ const i18n = {
         'wiki.loading': 'Searching Wikipedia…',
         'wiki.error': "Couldn't find an animal fact. Try again!",
         'modal.wiki': 'Read on Wikipedia',
+        'load_more': 'Load more',
+        'load_more_loading': 'Loading…',
+        'animal.elefante.name': 'Elephant', 'animal.elefante.desc': 'The largest land animal, known for its intelligence and memory.', 'animal.elefante.habitat': 'Savannas and forests', 'animal.elefante.dieta': 'Herbivore', 'animal.elefante.vida': '60-70 years',
+        'animal.perro.name': 'Dog', 'animal.perro.desc': "Man's best friend, domesticated over 15,000 years ago.", 'animal.perro.habitat': 'Domestic', 'animal.perro.dieta': 'Omnivore', 'animal.perro.vida': '10-15 years',
+        'animal.gato.name': 'Cat', 'animal.gato.desc': 'Agile and curious domestic feline, revered in ancient cultures.', 'animal.gato.habitat': 'Domestic', 'animal.gato.dieta': 'Carnivore', 'animal.gato.vida': '12-18 years',
+        'animal.caballo.name': 'Horse', 'animal.caballo.desc': 'Domesticated herbivore that has accompanied humans for millennia.', 'animal.caballo.habitat': 'Grasslands and plains', 'animal.caballo.dieta': 'Herbivore', 'animal.caballo.vida': '25-30 years',
+        'animal.oso_polar.name': 'Polar Bear', 'animal.oso_polar.desc': 'The largest land carnivore, perfectly adapted to Arctic ice.', 'animal.oso_polar.habitat': 'Arctic', 'animal.oso_polar.dieta': 'Carnivore', 'animal.oso_polar.vida': '25-30 years',
+        'animal.jirafa.name': 'Giraffe', 'animal.jirafa.desc': 'The tallest animal in the world, with a neck reaching 2 meters.', 'animal.jirafa.habitat': 'African savannas', 'animal.jirafa.dieta': 'Herbivore', 'animal.jirafa.vida': '20-25 years',
+        'animal.canguro.name': 'Kangaroo', 'animal.canguro.desc': 'Australian marsupial that moves by hopping great distances.', 'animal.canguro.habitat': 'Australia', 'animal.canguro.dieta': 'Herbivore', 'animal.canguro.vida': '6-8 years',
+        'animal.chimpance.name': 'Chimpanzee', 'animal.chimpance.desc': 'The closest primate to humans, sharing 98% of DNA.', 'animal.chimpance.habitat': 'African jungles', 'animal.chimpance.dieta': 'Omnivore', 'animal.chimpance.vida': '40-50 years',
+        'animal.zorro.name': 'Fox', 'animal.zorro.desc': 'Clever and adaptable canine present on almost every continent.', 'animal.zorro.habitat': 'Forests and tundra', 'animal.zorro.dieta': 'Carnivore', 'animal.zorro.vida': '3-6 years',
+        'animal.ciervo.name': 'Deer', 'animal.ciervo.desc': 'Elegant mammal with branching antlers that regrow each year.', 'animal.ciervo.habitat': 'Temperate forests', 'animal.ciervo.dieta': 'Herbivore', 'animal.ciervo.vida': '10-20 years',
+        'animal.gorrion.name': 'Sparrow', 'animal.gorrion.desc': 'Small urban bird perfectly adapted to city life.', 'animal.gorrion.habitat': 'Urban and rural areas', 'animal.gorrion.dieta': 'Omnivore', 'animal.gorrion.vida': '3-5 years',
+        'animal.pinguino.name': 'Penguin', 'animal.pinguino.desc': 'Flightless bird perfectly adapted to marine life in the southern hemisphere.', 'animal.pinguino.habitat': 'Antarctica and cold coasts', 'animal.pinguino.dieta': 'Carnivore', 'animal.pinguino.vida': '15-20 years',
+        'animal.loro.name': 'Parrot', 'animal.loro.desc': 'Tropical bird known for mimicking sounds and colorful plumage.', 'animal.loro.habitat': 'Tropical rainforests', 'animal.loro.dieta': 'Frugivore', 'animal.loro.vida': '30-50 years',
+        'animal.paloma.name': 'Pigeon', 'animal.paloma.desc': 'Domesticated bird since ancient times, symbol of peace and messenger.', 'animal.paloma.habitat': 'Cities and fields', 'animal.paloma.dieta': 'Granivore', 'animal.paloma.vida': '3-5 years',
+        'animal.pavo_real.name': 'Peacock', 'animal.pavo_real.desc': 'Famous for its spectacular iridescent plumage with eye-spots.', 'animal.pavo_real.habitat': 'South Asian forests', 'animal.pavo_real.dieta': 'Omnivore', 'animal.pavo_real.vida': '15-20 years',
+        'animal.ciguena.name': 'Stork', 'animal.ciguena.desc': 'Long-legged migratory bird associated with the arrival of spring.', 'animal.ciguena.habitat': 'Wetlands and fields', 'animal.ciguena.dieta': 'Carnivore', 'animal.ciguena.vida': '20-30 years',
+        'animal.cuervo.name': 'Raven', 'animal.cuervo.desc': 'One of the most intelligent birds, capable of using tools.', 'animal.cuervo.habitat': 'Forests and mountains', 'animal.cuervo.dieta': 'Omnivore', 'animal.cuervo.vida': '10-15 years',
+        'animal.avestruz.name': 'Ostrich', 'animal.avestruz.desc': 'The largest bird in the world, runs fast but cannot fly.', 'animal.avestruz.habitat': 'African savannas', 'animal.avestruz.dieta': 'Herbivore', 'animal.avestruz.vida': '30-40 years',
+        'animal.iguana.name': 'Iguana', 'animal.iguana.desc': 'Large herbivorous lizard with a distinctive dorsal crest.', 'animal.iguana.habitat': 'Tropical rainforests', 'animal.iguana.dieta': 'Herbivore', 'animal.iguana.vida': '15-20 years',
+        'animal.serpiente_cascabel.name': 'Rattlesnake', 'animal.serpiente_cascabel.desc': 'Venomous viper with a rattle on its tail used as a warning.', 'animal.serpiente_cascabel.habitat': 'Deserts and scrublands', 'animal.serpiente_cascabel.dieta': 'Carnivore', 'animal.serpiente_cascabel.vida': '10-20 years',
+        'animal.lagartija.name': 'Lizard', 'animal.lagartija.desc': 'Small agile reptile that inhabits walls and gardens.', 'animal.lagartija.habitat': 'Rocky areas and gardens', 'animal.lagartija.dieta': 'Insectivore', 'animal.lagartija.vida': '3-5 years',
+        'animal.dragon_komodo.name': 'Komodo Dragon', 'animal.dragon_komodo.desc': 'The largest lizard in the world, a lethal predator from Indonesian islands.', 'animal.dragon_komodo.habitat': 'Indonesian islands', 'animal.dragon_komodo.dieta': 'Carnivore', 'animal.dragon_komodo.vida': '30-50 years',
+        'animal.caiman.name': 'Caiman', 'animal.caiman.desc': 'Reptile related to crocodiles, found in American rivers and swamps.', 'animal.caiman.habitat': 'Rivers and swamps', 'animal.caiman.dieta': 'Carnivore', 'animal.caiman.vida': '30-40 years',
+        'animal.gecko.name': 'Gecko', 'animal.gecko.desc': 'Small lizard with adhesive pads that climbs any surface.', 'animal.gecko.habitat': 'Jungles and rocky areas', 'animal.gecko.dieta': 'Insectivore', 'animal.gecko.vida': '5-10 years',
+        'animal.boa.name': 'Boa Constrictor', 'animal.boa.desc': 'Non-venomous snake that kills by constriction, squeezing its prey.', 'animal.boa.habitat': 'Tropical rainforests', 'animal.boa.dieta': 'Carnivore', 'animal.boa.vida': '20-30 years',
+        'animal.monstruo_gila.name': 'Gila Monster', 'animal.monstruo_gila.desc': 'A venomous lizard with striking orange and black colors.', 'animal.monstruo_gila.habitat': 'North American deserts', 'animal.monstruo_gila.dieta': 'Carnivore', 'animal.monstruo_gila.vida': '20-30 years',
+        'animal.falsa_coral.name': 'False Coral Snake', 'animal.falsa_coral.desc': 'Harmless snake that mimics the colors of the venomous coral snake.', 'animal.falsa_coral.habitat': 'Tropical rainforests', 'animal.falsa_coral.dieta': 'Carnivore', 'animal.falsa_coral.vida': '10-15 years',
+        'animal.ballena_azul.name': 'Blue Whale', 'animal.ballena_azul.desc': 'The largest animal that has ever existed on Earth.', 'animal.ballena_azul.habitat': 'Open oceans', 'animal.ballena_azul.dieta': 'Carnivore', 'animal.ballena_azul.vida': '80-90 years',
+        'animal.orca.name': 'Orca', 'animal.orca.desc': 'Intelligent marine predator that hunts in groups like wolves.', 'animal.orca.habitat': 'Oceans worldwide', 'animal.orca.dieta': 'Carnivore', 'animal.orca.vida': '50-80 years',
+        'animal.caballito_mar.name': 'Seahorse', 'animal.caballito_mar.desc': 'Unique marine fish where the male incubates eggs in a pouch.', 'animal.caballito_mar.habitat': 'Coral reefs', 'animal.caballito_mar.dieta': 'Carnivore', 'animal.caballito_mar.vida': '1-5 years',
+        'animal.mantarraya.name': 'Manta Ray', 'animal.mantarraya.desc': 'Giant ray that can reach 7 meters in wingspan.', 'animal.mantarraya.habitat': 'Tropical oceans', 'animal.mantarraya.dieta': 'Carnivore', 'animal.mantarraya.vida': '20-30 years',
+        'animal.calamar_gigante.name': 'Giant Squid', 'animal.calamar_gigante.desc': 'Deep-sea mollusk, source of legends about sea monsters.', 'animal.calamar_gigante.habitat': 'Deep oceans', 'animal.calamar_gigante.dieta': 'Carnivore', 'animal.calamar_gigante.vida': '3-5 years',
+        'animal.estrella_mar.name': 'Starfish', 'animal.estrella_mar.desc': 'Echinoderm with five arms capable of regenerating lost limbs.', 'animal.estrella_mar.habitat': 'Sea floors', 'animal.estrella_mar.dieta': 'Carnivore', 'animal.estrella_mar.vida': '5-35 years',
+        'animal.cangrejo.name': 'Crab', 'animal.cangrejo.desc': 'Crustacean with a hard shell that walks sideways on coasts and seas.', 'animal.cangrejo.habitat': 'Coasts and sea floors', 'animal.cangrejo.dieta': 'Omnivore', 'animal.cangrejo.vida': '3-10 years',
     }
 };
 
@@ -231,28 +303,79 @@ function setLang(lang) {
 
 const animals = {
     leon: { img: 'https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600&h=400&fit=crop', habitat_key: 'animal.leon.habitat', dieta_key: 'animal.leon.dieta', vida_key: 'animal.leon.vida', wiki: 'Panthera_leo' },
-    delfin: { img: 'https://images.unsplash.com/photo-1570488344392-d00cc0fea93c?w=600&h=400&fit=crop', habitat_key: 'animal.delfin.habitat', dieta_key: 'animal.delfin.dieta', vida_key: 'animal.delfin.vida', wiki: 'Delphinus' },
+    delfin: { img: 'https://images.unsplash.com/photo-1570481662006-a3a1374699e8?w=600&h=400&fit=crop', habitat_key: 'animal.delfin.habitat', dieta_key: 'animal.delfin.dieta', vida_key: 'animal.delfin.vida', wiki: 'Delphinus' },
     oso: { img: 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=600&h=400&fit=crop', habitat_key: 'animal.oso.habitat', dieta_key: 'animal.oso.dieta', vida_key: 'animal.oso.vida', wiki: 'Ursus_arctos' },
-    murcielago: { img: 'https://images.unsplash.com/photo-1520637488054-89a7e2462f29?w=600&h=400&fit=crop', habitat_key: 'animal.murcielago.habitat', dieta_key: 'animal.murcielago.dieta', vida_key: 'animal.murcielago.vida', wiki: 'Chiroptera' },
+    murcielago: { img: 'https://images.unsplash.com/photo-1552726516-8e582c6ec1f7?w=600&h=400&fit=crop', habitat_key: 'animal.murcielago.habitat', dieta_key: 'animal.murcielago.dieta', vida_key: 'animal.murcielago.vida', wiki: 'Chiroptera' },
     aguila: { img: 'https://images.unsplash.com/photo-1611689342806-0863700ce1e4?w=600&h=400&fit=crop', habitat_key: 'animal.aguila.habitat', dieta_key: 'animal.aguila.dieta', vida_key: 'animal.aguila.vida', wiki: 'Aquila_chrysaetos' },
     colibri: { img: 'https://images.unsplash.com/photo-1550358864-518f202c02ba?w=600&h=400&fit=crop', habitat_key: 'animal.colibri.habitat', dieta_key: 'animal.colibri.dieta', vida_key: 'animal.colibri.vida', wiki: 'Trochilidae' },
     buho: { img: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&h=400&fit=crop', habitat_key: 'animal.buho.habitat', dieta_key: 'animal.buho.dieta', vida_key: 'animal.buho.vida', wiki: 'Bubo_bubo' },
     flamenco: { img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop', habitat_key: 'animal.flamenco.habitat', dieta_key: 'animal.flamenco.dieta', vida_key: 'animal.flamenco.vida', wiki: 'Phoenicopterus' },
-    cocodrilo: { img: 'https://images.unsplash.com/photo-1606159068539-7f4b0e1ab8e1?w=600&h=400&fit=crop', habitat_key: 'animal.cocodrilo.habitat', dieta_key: 'animal.cocodrilo.dieta', vida_key: 'animal.cocodrilo.vida', wiki: 'Crocodylidae' },
-    camaleon: { img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=600&h=400&fit=crop', habitat_key: 'animal.camaleon.habitat', dieta_key: 'animal.camaleon.dieta', vida_key: 'animal.camaleon.vida', wiki: 'Chamaeleonidae' },
+    cocodrilo: { img: 'https://images.unsplash.com/photo-1774590552091-47215947e629?w=600&h=400&fit=crop', habitat_key: 'animal.cocodrilo.habitat', dieta_key: 'animal.cocodrilo.dieta', vida_key: 'animal.cocodrilo.vida', wiki: 'Crocodylidae' },
+    camaleon: { img: '', habitat_key: 'animal.camaleon.habitat', dieta_key: 'animal.camaleon.dieta', vida_key: 'animal.camaleon.vida', wiki: 'Chamaeleonidae' },
     serpiente: { img: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=600&h=400&fit=crop', habitat_key: 'animal.serpiente.habitat', dieta_key: 'animal.serpiente.dieta', vida_key: 'animal.serpiente.vida', wiki: 'Ophiophagus_hannah' },
-    tortuga: { img: 'https://images.unsplash.com/photo-1590868309235-c002c4e9d168?w=600&h=400&fit=crop', habitat_key: 'animal.tortuga.habitat', dieta_key: 'animal.tortuga.dieta', vida_key: 'animal.tortuga.vida', wiki: 'Sea_turtle' },
+    tortuga: { img: '', habitat_key: 'animal.tortuga.habitat', dieta_key: 'animal.tortuga.dieta', vida_key: 'animal.tortuga.vida', wiki: 'Chelonioidea' },
     tiburon: { img: 'https://images.unsplash.com/photo-1560275619-4cc5fa59d3ae?w=600&h=400&fit=crop', habitat_key: 'animal.tiburon.habitat', dieta_key: 'animal.tiburon.dieta', vida_key: 'animal.tiburon.vida', wiki: 'Great_white_shark' },
-    medusa: { img: 'https://images.unsplash.com/photo-1558635852-a457aa3b6b2f?w=600&h=400&fit=crop', habitat_key: 'animal.medusa.habitat', dieta_key: 'animal.medusa.dieta', vida_key: 'animal.medusa.vida', wiki: 'Jellyfish' },
-    pezPayaso: { img: 'https://images.unsplash.com/photo-1559482574-7cc9e6dbf268?w=600&h=400&fit=crop', habitat_key: 'animal.pezPayaso.habitat', dieta_key: 'animal.pezPayaso.dieta', vida_key: 'animal.pezPayaso.vida', wiki: 'Clownfish' },
-    pulpo: { img: 'https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=600&h=400&fit=crop', habitat_key: 'animal.pulpo.habitat', dieta_key: 'animal.pulpo.dieta', vida_key: 'animal.pulpo.vida', wiki: 'Octopus' }
+    medusa: { img: '', habitat_key: 'animal.medusa.habitat', dieta_key: 'animal.medusa.dieta', vida_key: 'animal.medusa.vida', wiki: 'Medusozoa' },
+    pezPayaso: { img: '', habitat_key: 'animal.pezPayaso.habitat', dieta_key: 'animal.pezPayaso.dieta', vida_key: 'animal.pezPayaso.vida', wiki: 'Amphiprioninae' },
+    pulpo: { img: 'https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=600&h=400&fit=crop', habitat_key: 'animal.pulpo.habitat', dieta_key: 'animal.pulpo.dieta', vida_key: 'animal.pulpo.vida', wiki: 'Octopus' },
+    elefante: { img: '', habitat_key: 'animal.elefante.habitat', dieta_key: 'animal.elefante.dieta', vida_key: 'animal.elefante.vida', wiki: 'Elephantidae' },
+    perro: { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Huskiesatrest.jpg/330px-Huskiesatrest.jpg', habitat_key: 'animal.perro.habitat', dieta_key: 'animal.perro.dieta', vida_key: 'animal.perro.vida', wiki: 'Canis_lupus_familiaris' },
+    gato: { img: '', habitat_key: 'animal.gato.habitat', dieta_key: 'animal.gato.dieta', vida_key: 'animal.gato.vida', wiki: 'Felis_silvestris_catus' },
+    caballo: { img: '', habitat_key: 'animal.caballo.habitat', dieta_key: 'animal.caballo.dieta', vida_key: 'animal.caballo.vida', wiki: 'Equus_ferus_caballus' },
+    oso_polar: { img: '', habitat_key: 'animal.oso_polar.habitat', dieta_key: 'animal.oso_polar.dieta', vida_key: 'animal.oso_polar.vida', wiki: 'Ursus_maritimus' },
+    jirafa: { img: '', habitat_key: 'animal.jirafa.habitat', dieta_key: 'animal.jirafa.dieta', vida_key: 'animal.jirafa.vida', wiki: 'Giraffa' },
+    canguro: { img: '', habitat_key: 'animal.canguro.habitat', dieta_key: 'animal.canguro.dieta', vida_key: 'animal.canguro.vida', wiki: 'Macropus' },
+    chimpance: { img: '', habitat_key: 'animal.chimpance.habitat', dieta_key: 'animal.chimpance.dieta', vida_key: 'animal.chimpance.vida', wiki: 'Pan_troglodytes' },
+    zorro: { img: '', habitat_key: 'animal.zorro.habitat', dieta_key: 'animal.zorro.dieta', vida_key: 'animal.zorro.vida', wiki: 'Vulpes_vulpes' },
+    ciervo: { img: '', habitat_key: 'animal.ciervo.habitat', dieta_key: 'animal.ciervo.dieta', vida_key: 'animal.ciervo.vida', wiki: 'Cervidae' },
+    gorrion: { img: '', habitat_key: 'animal.gorrion.habitat', dieta_key: 'animal.gorrion.dieta', vida_key: 'animal.gorrion.vida', wiki: 'Passer_domesticus' },
+    pinguino: { img: '', habitat_key: 'animal.pinguino.habitat', dieta_key: 'animal.pinguino.dieta', vida_key: 'animal.pinguino.vida', wiki: 'Spheniscidae' },
+    loro: { img: '', habitat_key: 'animal.loro.habitat', dieta_key: 'animal.loro.dieta', vida_key: 'animal.loro.vida', wiki: 'Psittacidae' },
+    paloma: { img: '', habitat_key: 'animal.paloma.habitat', dieta_key: 'animal.paloma.dieta', vida_key: 'animal.paloma.vida', wiki: 'Columbidae' },
+    pavo_real: { img: '', habitat_key: 'animal.pavo_real.habitat', dieta_key: 'animal.pavo_real.dieta', vida_key: 'animal.pavo_real.vida', wiki: 'Pavo_cristatus' },
+    ciguena: { img: '', habitat_key: 'animal.ciguena.habitat', dieta_key: 'animal.ciguena.dieta', vida_key: 'animal.ciguena.vida', wiki: 'Ciconia_ciconia' },
+    cuervo: { img: '', habitat_key: 'animal.cuervo.habitat', dieta_key: 'animal.cuervo.dieta', vida_key: 'animal.cuervo.vida', wiki: 'Corvus_corax' },
+    avestruz: { img: '', habitat_key: 'animal.avestruz.habitat', dieta_key: 'animal.avestruz.dieta', vida_key: 'animal.avestruz.vida', wiki: 'Struthio_camelus' },
+    iguana: { img: '', habitat_key: 'animal.iguana.habitat', dieta_key: 'animal.iguana.dieta', vida_key: 'animal.iguana.vida', wiki: 'Iguana_iguana' },
+    serpiente_cascabel: { img: '', habitat_key: 'animal.serpiente_cascabel.habitat', dieta_key: 'animal.serpiente_cascabel.dieta', vida_key: 'animal.serpiente_cascabel.vida', wiki: 'Crotalus' },
+    lagartija: { img: '', habitat_key: 'animal.lagartija.habitat', dieta_key: 'animal.lagartija.dieta', vida_key: 'animal.lagartija.vida', wiki: 'Lacertidae' },
+    dragon_komodo: { img: '', habitat_key: 'animal.dragon_komodo.habitat', dieta_key: 'animal.dragon_komodo.dieta', vida_key: 'animal.dragon_komodo.vida', wiki: 'Varanus_komodoensis' },
+    caiman: { img: '', habitat_key: 'animal.caiman.habitat', dieta_key: 'animal.caiman.dieta', vida_key: 'animal.caiman.vida', wiki: 'Caiman' },
+    gecko: { img: '', habitat_key: 'animal.gecko.habitat', dieta_key: 'animal.gecko.dieta', vida_key: 'animal.gecko.vida', wiki: 'Gekkota' },
+    boa: { img: '', habitat_key: 'animal.boa.habitat', dieta_key: 'animal.boa.dieta', vida_key: 'animal.boa.vida', wiki: 'Boidae' },
+    monstruo_gila: { img: '', habitat_key: 'animal.monstruo_gila.habitat', dieta_key: 'animal.monstruo_gila.dieta', vida_key: 'animal.monstruo_gila.vida', wiki: 'Heloderma_suspectum' },
+    falsa_coral: { img: '', habitat_key: 'animal.falsa_coral.habitat', dieta_key: 'animal.falsa_coral.dieta', vida_key: 'animal.falsa_coral.vida', wiki: 'Lampropeltis' },
+    ballena_azul: { img: '', habitat_key: 'animal.ballena_azul.habitat', dieta_key: 'animal.ballena_azul.dieta', vida_key: 'animal.ballena_azul.vida', wiki: 'Balaenoptera_musculus' },
+    orca: { img: '', habitat_key: 'animal.orca.habitat', dieta_key: 'animal.orca.dieta', vida_key: 'animal.orca.vida', wiki: 'Orcinus_orca' },
+    caballito_mar: { img: '', habitat_key: 'animal.caballito_mar.habitat', dieta_key: 'animal.caballito_mar.dieta', vida_key: 'animal.caballito_mar.vida', wiki: 'Hippocampus' },
+    mantarraya: { img: '', habitat_key: 'animal.mantarraya.habitat', dieta_key: 'animal.mantarraya.dieta', vida_key: 'animal.mantarraya.vida', wiki: 'Manta_birostris' },
+    calamar_gigante: { img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Giant_squid_Ranheim.jpg/330px-Giant_squid_Ranheim.jpg', habitat_key: 'animal.calamar_gigante.habitat', dieta_key: 'animal.calamar_gigante.dieta', vida_key: 'animal.calamar_gigante.vida', wiki: 'Architeuthis' },
+    estrella_mar: { img: '', habitat_key: 'animal.estrella_mar.habitat', dieta_key: 'animal.estrella_mar.dieta', vida_key: 'animal.estrella_mar.vida', wiki: 'Asteroidea' },
+    cangrejo: { img: '', habitat_key: 'animal.cangrejo.habitat', dieta_key: 'animal.cangrejo.dieta', vida_key: 'animal.cangrejo.vida', wiki: 'Brachyura' }
 };
 
 const animalCategories = {
-    leon: 'mamiferos', delfin: 'mamiferos', oso: 'mamiferos', murcielago: 'mamiferos',
+    leon: 'mamiferos', delfin: 'acuaticos', oso: 'mamiferos', murcielago: 'mamiferos',
     aguila: 'aves', colibri: 'aves', buho: 'aves', flamenco: 'aves',
     cocodrilo: 'reptiles', camaleon: 'reptiles', serpiente: 'reptiles', tortuga: 'reptiles',
-    tiburon: 'acuaticos', medusa: 'acuaticos', pezPayaso: 'acuaticos', pulpo: 'acuaticos'
+    tiburon: 'acuaticos', medusa: 'acuaticos', pezPayaso: 'acuaticos', pulpo: 'acuaticos',
+    elefante: 'mamiferos', perro: 'mamiferos', gato: 'mamiferos', caballo: 'mamiferos',
+    oso_polar: 'mamiferos', jirafa: 'mamiferos', canguro: 'mamiferos', chimpance: 'mamiferos',
+    zorro: 'mamiferos', ciervo: 'mamiferos',
+    gorrion: 'aves', pinguino: 'aves', loro: 'aves', paloma: 'aves',
+    pavo_real: 'aves', ciguena: 'aves', cuervo: 'aves', avestruz: 'aves',
+    iguana: 'reptiles', serpiente_cascabel: 'reptiles', lagartija: 'reptiles',
+    dragon_komodo: 'reptiles', caiman: 'reptiles', gecko: 'reptiles', boa: 'reptiles',
+    monstruo_gila: 'reptiles', falsa_coral: 'reptiles',
+    ballena_azul: 'acuaticos', orca: 'acuaticos', caballito_mar: 'acuaticos',
+    mantarraya: 'acuaticos', calamar_gigante: 'acuaticos', estrella_mar: 'acuaticos', cangrejo: 'acuaticos'
+};
+
+const CATEGORY_ORDER = {
+    mamiferos: ['leon', 'elefante', 'perro', 'gato', 'caballo', 'oso_polar', 'jirafa', 'canguro', 'murcielago', 'chimpance', 'zorro', 'ciervo'],
+    aves: ['aguila', 'gorrion', 'pinguino', 'flamenco', 'loro', 'buho', 'paloma', 'pavo_real', 'colibri', 'ciguena', 'cuervo', 'avestruz'],
+    reptiles: ['cocodrilo', 'tortuga', 'iguana', 'serpiente_cascabel', 'camaleon', 'lagartija', 'dragon_komodo', 'caiman', 'gecko', 'boa', 'monstruo_gila', 'falsa_coral'],
+    acuaticos: ['delfin', 'tiburon', 'ballena_azul', 'pulpo', 'orca', 'pezPayaso', 'medusa', 'caballito_mar', 'mantarraya', 'calamar_gigante', 'estrella_mar', 'cangrejo']
 };
 
 function getFavorites() {
@@ -301,9 +424,9 @@ function renderFavorites() {
     }
     emptyFavs.style.display = 'none';
     favs.forEach(key => {
-        const card = document.querySelector(`.animal-card[data-animal="${key}"]`);
-        if (card) {
-            const clone = card.cloneNode(true);
+        const existing = document.querySelector(`.animal-card[data-animal="${key}"]`);
+        if (existing) {
+            const clone = existing.cloneNode(true);
             clone.addEventListener('click', e => {
                 if (e.target.closest('.fav-btn')) return;
                 openModal(clone.dataset.animal);
@@ -316,6 +439,9 @@ function renderFavorites() {
                 });
             }
             favoritesGrid.appendChild(clone);
+        } else {
+            const card = buildCardElement(key);
+            if (card) favoritesGrid.appendChild(card);
         }
     });
 }
@@ -337,13 +463,7 @@ function openModal(key) {
     const desc = card.querySelector('.card-body > p').textContent;
 
     const langPath = currentLang === 'en' ? 'en' : 'es';
-    modalBody.innerHTML = `
-        <div class="modal-img-wrapper" style="background:var(--bg-secondary);border-radius:12px;margin-bottom:24px;max-height:300px;overflow:hidden">
-            <img src="${data.img}" alt="${name}" loading="lazy" style="width:100%;display:block;max-height:300px;object-fit:cover">
-        </div>
-        <h2>${name}</h2>
-        <p class="scientific">${scientific}</p>
-        <p class="description">${desc}</p>
+    const detailsHtml = data.habitat_key ? `
         <div class="details">
             <div class="detail-item">
                 <strong>${t('modal.habitat')}</strong>
@@ -357,35 +477,156 @@ function openModal(key) {
                 <strong>${t('modal.vida')}</strong>
                 <span>${t(data.vida_key)}</span>
             </div>
+        </div>` : '';
+    modalBody.innerHTML = `
+        <div class="modal-img-wrapper" style="background:linear-gradient(135deg,${randomGradient()});border-radius:12px;margin-bottom:24px;max-height:300px;overflow:hidden">
+            ${data.img ? `<img src="${data.img}" alt="${name}" loading="lazy" style="width:100%;display:block;max-height:300px;object-fit:cover">` : `<div style="height:300px"></div>`}
         </div>
+        <h2>${name}</h2>
+        <p class="scientific">${scientific}</p>
+        <p class="description">${desc}</p>
+        ${detailsHtml}
         <a class="modal-wiki-link" href="https://${langPath}.wikipedia.org/wiki/${data.wiki}" target="_blank" rel="noopener">${t('modal.wiki')} 📖</a>
     `;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-// Init
-document.addEventListener('DOMContentLoaded', () => {
-    const gradients = [
+function randomGradient() {
+    const colors = [
         '#f97316,#dc2626', '#06b6d4,#3b82f6', '#92400e,#78350f', '#1e293b,#0f172a',
         '#92400e,#a16207', '#059669,#10b981', '#451a03,#292524', '#f43f5e,#e11d48',
         '#166534,#14532d', '#65a30d,#4d7c0f', '#1e293b,#334155', '#15803d,#166534',
         '#1e3a5f,#0c4a6e', '#a21caf,#86198f', '#ea580c,#c2410c', '#c2410c,#9a3412'
     ];
-    document.querySelectorAll('.card-image').forEach((el, i) => {
-        el.style.background = `linear-gradient(135deg,${gradients[i]})`;
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+async function fetchWikiImage(key) {
+    const data = animals[key];
+    if (!data || !data.wiki) return;
+    try {
+        const res = await fetch(`https://es.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(data.wiki)}`);
+        if (!res.ok) return;
+        const d = await res.json();
+        if (d.thumbnail?.source) {
+            data.img = d.thumbnail.source;
+            const img = document.querySelector(`.animal-card[data-animal="${key}"] .card-image img`);
+            if (img) {
+                img.style.display = '';
+                img.src = data.img;
+            }
+        }
+    } catch {}
+}
+
+function buildCardElement(key) {
+    const data = animals[key];
+    if (!data) return null;
+
+    const nameKey = 'animal.' + key + '.name';
+    const name = t(nameKey);
+    const scientific = data.wiki.replace(/_/g, ' ');
+    const descKey = 'animal.' + key + '.desc';
+    const desc = t(descKey);
+
+    const card = document.createElement('article');
+    card.className = 'animal-card';
+    card.dataset.animal = key;
+    card.innerHTML = `
+        <button class="fav-btn" data-animal="${key}" aria-label="Añadir a favoritos">♡</button>
+        <div class="card-image" style="background:linear-gradient(135deg,${randomGradient()})">
+            <img src="${(data.img || '').replace('w=600&h=400', 'w=400&h=300')}" alt="${name}" loading="lazy">
+        </div>
+        <div class="card-body">
+            <h3>${name}</h3>
+            <p class="scientific">${scientific}</p>
+            <p>${desc}</p>
+        </div>`;
+
+    card.addEventListener('click', e => {
+        if (e.target.closest('.fav-btn')) return;
+        openModal(key);
+    });
+    const btn = card.querySelector('.fav-btn');
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleFavorite(key);
     });
 
+    if (isFavorite(key)) {
+        btn.classList.add('active');
+        btn.textContent = '♥';
+    }
+
+    if (!data.img) fetchWikiImage(key);
+
+    return card;
+}
+
+function createAnimalCard(key, category) {
+    const grid = document.querySelector(`section[data-category="${category}"] .card-grid`);
+    if (!grid) return;
+
+    const card = buildCardElement(key);
+    if (!card) return;
+
+    grid.appendChild(card);
+
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    requestAnimationFrame(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+    });
+}
+
+function showCategoryCards(category, start) {
+    const list = CATEGORY_ORDER[category];
+    if (!list) return;
+    const grid = document.querySelector(`section[data-category="${category}"] .card-grid`);
+    if (!grid) return;
+    grid.innerHTML = '';
+    for (let i = 0; i < 3; i++) {
+        const key = list[(start + i) % list.length];
+        createAnimalCard(key, category);
+    }
+}
+
+function initCategoryLoadMore() {
+    const startIndex = {};
+    document.querySelectorAll('.category-section[data-category]').forEach(section => {
+        const category = section.dataset.category;
+        if (category === 'favorites') return;
+        startIndex[category] = 0;
+        showCategoryCards(category, 0);
+
+        const btn = document.createElement('button');
+        btn.className = 'load-more-btn';
+        btn.textContent = t('load_more');
+        btn.addEventListener('click', () => {
+            startIndex[category] = (startIndex[category] + 3) % 12;
+            showCategoryCards(category, startIndex[category]);
+            renderFavorites();
+        });
+        section.appendChild(btn);
+    });
+    renderFavorites();
+    updateFavButtons();
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem(LANG_KEY) || 'es';
     setLang(savedLang);
-
-    updateFavButtons();
-    renderFavorites();
 
     if (localStorage.getItem('theme') === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         themeToggle.textContent = '☀️';
     }
+
+    initCategoryLoadMore();
 });
 
 document.addEventListener('error', e => {
@@ -455,7 +696,9 @@ searchInput.addEventListener('input', () => {
     const term = searchInput.value.toLowerCase().trim();
     document.querySelectorAll('.animal-card').forEach(card => {
         const name = card.querySelector('h3').textContent.toLowerCase();
-        card.classList.toggle('hidden', term && !name.includes(term));
+        const sci = card.querySelector('.scientific').textContent.toLowerCase();
+        const text = name + ' ' + sci;
+        card.classList.toggle('hidden', term && !text.includes(term));
     });
     applyFilter();
 });
@@ -484,12 +727,15 @@ function applyFilter() {
         section.querySelectorAll('.animal-card').forEach(card => {
             const key = card.dataset.animal;
             const name = card.querySelector('h3').textContent.toLowerCase();
-            const matchesSearch = !term || name.includes(term);
+            const sci = card.querySelector('.scientific').textContent.toLowerCase();
+            const matchesSearch = !term || (name + ' ' + sci).includes(term);
             if (filter === 'all') {
                 card.classList.toggle('hidden', !matchesSearch);
                 if (!card.classList.contains('hidden')) show = true;
             } else if (filter === 'favorites') {
-                card.classList.add('hidden');
+                const isFav = isFavorite(key);
+                card.classList.toggle('hidden', !isFav);
+                if (!card.classList.contains('hidden')) show = true;
             } else {
                 const matchesCat = animalCategories[key] === filter;
                 card.classList.toggle('hidden', !(matchesCat && matchesSearch));
@@ -557,9 +803,7 @@ document.querySelectorAll('.animal-card, .curiosity-card, .stat-card').forEach(e
 // Wikipedia random fact
 const wikiFactBtn = document.getElementById('wikiFactBtn');
 const wikiFactBody = document.getElementById('wikiFactBody');
-const ANIMAL_KEYWORDS = ['animal', 'especie', 'mamífero', 'ave', 'reptil', 'pez', 'insecto',
-                         'felino', 'canino', 'depredador', 'herbívoro', 'carnívoro',
-                         'animal', 'species', 'mammal', 'bird', 'reptile', 'fish', 'insect'];
+const ANIMAL_KEYS = Object.keys(animals);
 
 wikiFactBtn.addEventListener('click', fetchWikiFact);
 
@@ -567,32 +811,25 @@ async function fetchWikiFact() {
     wikiFactBtn.disabled = true;
     wikiFactBody.innerHTML = `<div class="wiki-fact-spinner"></div>`;
 
+    const key = ANIMAL_KEYS[Math.floor(Math.random() * ANIMAL_KEYS.length)];
+    const animalData = animals[key];
     const langPath = currentLang === 'en' ? 'en' : 'es';
-    const api = `https://${langPath}.wikipedia.org/api/rest_v1/page/random/summary`;
 
-    for (let attempt = 0; attempt < 5; attempt++) {
-        try {
-            const res = await fetch(api);
-            if (!res.ok) throw new Error('Fetch failed');
-            const data = await res.json();
-            const extract = (data.extract || '').toLowerCase();
-            const isAnimal = ANIMAL_KEYWORDS.some(kw => extract.includes(kw));
-            if (!isAnimal && attempt < 4) continue;
+    try {
+        const res = await fetch(`https://${langPath}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(animalData.wiki)}`);
+        if (!res.ok) throw new Error('Fetch failed');
+        const data = await res.json();
 
-            wikiFactBody.innerHTML = `
-                <div class="wiki-fact-content">
-                    <h3>${data.title}</h3>
-                    <p>${data.extract || t('wiki.error')}</p>
-                    <a href="https://${langPath}.wikipedia.org/wiki/${encodeURIComponent(data.title)}" target="_blank" rel="noopener">${t('modal.wiki')} 📖</a>
-                </div>
-            `;
-            wikiFactBtn.disabled = false;
-            return;
-        } catch {
-            if (attempt === 4) {
-                wikiFactBody.innerHTML = `<p class="wiki-fact-error">${t('wiki.error')}</p>`;
-                wikiFactBtn.disabled = false;
-            }
-        }
+        wikiFactBody.innerHTML = `
+            <div class="wiki-fact-content">
+                <h3>${data.title}</h3>
+                <p>${data.extract || t('wiki.error')}</p>
+                <a href="https://${langPath}.wikipedia.org/wiki/${encodeURIComponent(data.title)}" target="_blank" rel="noopener">${t('modal.wiki')} 📖</a>
+            </div>
+        `;
+    } catch {
+        wikiFactBody.innerHTML = `<p class="wiki-fact-error">${t('wiki.error')}</p>`;
     }
+
+    wikiFactBtn.disabled = false;
 }

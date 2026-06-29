@@ -918,7 +918,32 @@ body {
     color: white;
 }
 
-/* Compare mode */
+/* Load More Button */
+.load-more-btn {
+    display: block;
+    margin: 32px auto 0;
+    padding: 12px 32px;
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.load-more-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.load-more-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: transparent;
+    color: var(--accent);
+}
 
 /* Responsive */
 @media (max-width: 768px) {

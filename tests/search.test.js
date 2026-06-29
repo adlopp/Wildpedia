@@ -26,9 +26,8 @@ describe('Buscador y Filtros', () => {
         applyFilter();
 
         const visible = document.querySelectorAll('.animal-card:not(.hidden)');
-        assert.strictEqual(visible.length, 2);
+        assert.strictEqual(visible.length, 1);
         assert.strictEqual(visible[0].dataset.animal, 'leon');
-        assert.strictEqual(visible[1].dataset.animal, 'delfin');
     });
 
     test('escribir en el buscador oculta tarjetas que no coinciden', () => {
