@@ -34,6 +34,14 @@ O con servidor local:
 npx serve .
 ```
 
+O con Docker:
+
+```sh
+docker build -t wildpedia .
+docker run -p 8080:80 wildpedia
+# Abrir http://localhost:8080
+```
+
 ## 🗂️ Estructura
 
 ```
