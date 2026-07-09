@@ -10,8 +10,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^30.4.2",
-    "jest-environment-jsdom": "^30.4.1",
     "linkedom": "^0.18.12"
   }
 }

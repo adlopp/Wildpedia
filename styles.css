@@ -273,6 +273,55 @@ body {
     pointer-events: none;
 }
 
+.search-suggestions {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-hover);
+    list-style: none;
+    padding: 4px 0;
+    z-index: 100;
+    display: none;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.search-suggestions.active {
+    display: block;
+}
+
+.search-suggestions li {
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    transition: background var(--transition);
+}
+
+.search-suggestions li:hover {
+    background: var(--accent-light);
+}
+
+.search-suggestions li span {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.animal-card.highlighted {
+    box-shadow: 0 0 0 3px var(--accent), var(--shadow-hover);
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    background: var(--accent-light);
+}
+
 .btn-primary {
     display: inline-block;
     padding: 16px 40px;
@@ -332,6 +381,23 @@ body {
     font-size: 0.85rem;
     color: var(--text-secondary);
     font-weight: 500;
+}
+
+/* Search Empty */
+.search-empty {
+    max-width: 1200px;
+    margin: 32px auto 0;
+    padding: 0 24px;
+}
+
+.search-empty p {
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--bg-card);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    font-size: 1.05rem;
 }
 
 /* Filter Bar */
@@ -398,6 +464,57 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-track .animal-card {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 280px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.carousel-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.carousel-btn.prev {
+    left: -20px;
+}
+
+.carousel-btn.next {
+    right: -20px;
 }
 
 .animal-card {
@@ -603,7 +720,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 48px;
 }
 
@@ -637,6 +754,29 @@ body {
 }
 
 .footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-contact h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-contact ul {
+    list-style: none;
+}
+
+.footer-contact a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: block;
+    padding: 4px 0;
+    transition: color var(--transition);
+}
+
+.footer-contact a:hover {
     color: var(--accent);
 }
 
@@ -772,6 +912,146 @@ body {
 .toast.visible {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+/* Auth Button */
+.auth-btn {
+    background: none;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-btn:hover {
+    border-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.auth-btn.logged-in {
+    width: auto;
+    border-radius: 50px;
+    padding: 0 12px;
+    font-size: 0.85rem;
+    gap: 6px;
+}
+
+/* Auth Forms */
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.auth-form .form-group {
+    margin-bottom: 16px;
+}
+
+.auth-form .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.auth-form .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all var(--transition);
+    outline: none;
+}
+
+.auth-form .form-group input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.auth-form .auth-submit {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.auth-form .auth-submit:hover {
+    background: var(--accent-hover);
+}
+
+.auth-form .auth-toggle {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.auth-form .auth-toggle a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-form .auth-toggle a:hover {
+    text-decoration: underline;
+}
+
+.auth-form .auth-error {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+[data-theme="dark"] .auth-form .auth-error {
+    background: #3b1818;
+    color: #fca5a5;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 44px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.5;
+    transition: opacity var(--transition);
+    line-height: 1;
+}
+
+.password-toggle:hover {
+    opacity: 1;
 }
 
 /* Scrollbar */

@@ -5,6 +5,7 @@ const { setupGlobalDOM, clearDOM, loadScript } = require('./helpers');
 beforeEach(() => {
     setupGlobalDOM();
     loadScript();
+    localStorage.setItem('wildpedia_session', 'testuser');
 });
 
 afterEach(() => {

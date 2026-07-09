@@ -9,14 +9,20 @@ Visual explorer of the animal kingdom with search, filters, favorites, and dark 
 
 | Feature | Detail |
 |---|---|
-| 🔍 **Real-time search** | Filters 16 animals by name as you type |
+| 🔍 **Real-time search** | Filters 16 animals by name as you type, suggestions dropdown with relevance ordering |
 | 🏷️ **Category filters** | Mammals, Birds, Reptiles, Aquatic + Favorites |
-| ❤️ **Persistent favorites** | Saved in localStorage, dedicated section |
+| ❤️ **Persistent favorites** | Saved in localStorage, requires login, dedicated section |
 | 🌙 **Dark mode** | Persists in localStorage |
 | 🌐 **ES/EN language** | Full translation, persists in localStorage |
 | 🎲 **Random animal** | Surprise modal with one click |
 | 📱 **Responsive** | 3 breakpoints: desktop, tablet, mobile |
 | 🎬 **Animations** | Fade-in with IntersectionObserver, animated counters |
+| 🔐 **Demo login** | Register/login with validation, session in localStorage |
+| 👁️ **Password toggle** | Show/hide button on password fields |
+| 🗑️ **Account management** | Logout and delete account (with password re-entry) |
+| 🔄 **Carousel navigation** | ◀ ▶ arrows to slide through cards per category |
+| 🎯 **Empty search state** | Friendly message when no results match |
+| 🌍 **Contact footer** | Email and phone in the footer |
 
 ## 🚀 Preview
 
@@ -34,14 +40,6 @@ Or with a local server:
 npx serve .
 ```
 
-Or with Docker:
-
-```sh
-docker build -t wildpedia .
-docker run -p 8080:80 wildpedia
-# Open http://localhost:8080
-```
-
 ## 🗂️ Structure
 
 ```
@@ -57,6 +55,9 @@ docker run -p 8080:80 wildpedia
 ├── package.json
 └── AGENTS.md        # Instructions for OpenCode
 ```
+
+> All data (favorites, theme, language, users) is stored in the browser's `localStorage`.  
+> Registration / login is client-side only (demo purpose). No data is sent to any server.
 
 ## 🧠 What it demonstrates
 

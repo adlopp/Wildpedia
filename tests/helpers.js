@@ -22,18 +22,24 @@ function setupGlobalDOM(html) {
                     <div class="nav-actions">
                         <button class="lang-toggle" id="langToggle" aria-label="Switch language">🇬🇧</button>
                         <button class="random-btn" id="randomBtn">🎲</button>
+                        <button class="auth-btn" id="authBtn">👤</button>
                         <button class="theme-toggle" id="themeToggle">🌙</button>
                         <button class="menu-toggle" id="menuToggle">☰</button>
                     </div>
                 </div>
             </nav>
 
-            <input type="text" id="searchInput" data-i18n="search.placeholder" placeholder="Buscar animal por nombre…">
+            <div class="search-container">
+                <input type="text" id="searchInput" data-i18n="search.placeholder" placeholder="Buscar animal por nombre…">
+                <ul class="search-suggestions" id="searchSuggestions"></ul>
+            </div>
 
             <div class="filter-bar">
                 <button class="filter-pill active" data-filter="all" data-i18n="filter.all">Todos</button>
                 <button class="filter-pill" data-filter="mamiferos" data-i18n="filter.mamiferos">🐘 Mamíferos</button>
             </div>
+
+            <div class="search-empty" id="searchEmpty"></div>
 
             <section id="mamiferos" class="category-section" data-category="mamiferos">
                 <h2 data-i18n="section.mamiferos.title">🐘 Mamíferos</h2>
@@ -83,6 +89,13 @@ function setupGlobalDOM(html) {
                 <div class="modal-content">
                     <button class="modal-close" id="modalClose">&times;</button>
                     <div id="modalBody"></div>
+                </div>
+            </div>
+
+            <div class="modal" id="authModal">
+                <div class="modal-content">
+                    <button class="modal-close" id="authModalClose">&times;</button>
+                    <div id="authModalBody"></div>
                 </div>
             </div>
 
@@ -139,6 +152,7 @@ function setupGlobalDOM(html) {
 
     global.setTimeout = setTimeout;
     global.clearTimeout = clearTimeout;
+    global.confirm = () => true;
 
     cleanupFns.push(() => {
         delete global.window;

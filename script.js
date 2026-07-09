@@ -12,8 +12,15 @@ const toast = document.getElementById('toast');
 const favoritesGrid = document.getElementById('favoritesGrid');
 const emptyFavs = document.getElementById('emptyFavs');
 
+const authBtn = document.getElementById('authBtn');
+const authModal = document.getElementById('authModal');
+const authModalClose = document.getElementById('authModalClose');
+const authModalBody = document.getElementById('authModalBody');
+
 const ANIMAL_KEY = 'animalia_favorites';
 const LANG_KEY = 'animalia_lang';
+const AUTH_USERS_KEY = 'wildpedia_users';
+const AUTH_SESSION_KEY = 'wildpedia_session';
 
 let currentLang = 'es';
 
@@ -24,7 +31,7 @@ const i18n = {
         'nav.reptiles': 'Reptiles', 'nav.acuaticos': 'Acuáticos', 'nav.favoritos': 'Favoritos',
         'hero.title': 'Descubre el Reino Animal',
         'hero.desc': 'Explora la fascinante diversidad de especies que habitan nuestro planeta. Desde los majestuosos mamíferos hasta los coloridos habitantes del océano.',
-        'search.placeholder': 'Buscar animal por nombre…',
+        'search.placeholder': 'Buscar animal por nombre…', 'search.empty': 'No se encontraron animales con ese nombre.',
         'stat.species': 'Especies conocidas', 'stat.years': 'Millones de años',
         'stat.classes': 'Clases principales', 'stat.water': '% del planeta agua',
         'filter.all': 'Todos', 'filter.mamiferos': '🐘 Mamíferos', 'filter.aves': '🦅 Aves',
@@ -100,6 +107,7 @@ const i18n = {
         'curiosity.4.desc': 'La medusa Turritopsis dohrnii es considerada "biológicamente inmortal" al poder revertir su ciclo de vida.',
         'footer.desc': 'Explorando la diversidad de la vida en la Tierra.',
         'footer.categories': 'Categorías',
+        'footer.contact': 'Contacto',
         'footer.copyright': '© 2026 Wildpedia. Hecho con ❤️ por @adlopp para los amantes de la naturaleza.',
         'toast.added': '❤️ Añadido a favoritos',
         'toast.removed': '💔 Eliminado de favoritos',
@@ -109,6 +117,20 @@ const i18n = {
         'wiki.btn': '🎲 Nuevo dato',
         'wiki.loading': 'Buscando en Wikipedia…',
         'wiki.error': 'No se encontró un dato de animal. ¡Intenta de nuevo!',
+        'auth.login.title': 'Iniciar Sesión', 'auth.register.title': 'Crear Cuenta',
+        'auth.username': 'Usuario', 'auth.email': 'Correo electrónico', 'auth.password': 'Contraseña', 'auth.confirm': 'Confirmar contraseña',
+        'auth.login_btn': 'Entrar', 'auth.register_btn': 'Registrarse',
+        'auth.no_account': '¿No tienes cuenta?', 'auth.has_account': '¿Ya tienes cuenta?',
+        'auth.register_link': 'Regístrate', 'auth.login_link': 'Inicia sesión',
+        'auth.error_exists': 'El usuario ya existe', 'auth.error_credentials': 'Usuario o contraseña incorrectos',
+        'auth.error_passwords': 'Las contraseñas no coinciden',         'auth.error_empty': 'Completa todos los campos',
+        'auth.error_minlength': 'Usuario y contraseña deben tener al menos 4 caracteres',
+        'auth.error_username_chars': 'El usuario solo puede contener letras sin tildes, números y guión bajo',
+        'auth.logout_btn': 'Cerrar sesión', 'auth.delete_btn': 'Eliminar cuenta',
+        'auth.delete_confirm': 'Escribe tu contraseña para eliminar la cuenta.',
+        'auth.deleted': 'Cuenta eliminada',
+        'auth.cancel': 'Cancelar',
+        'toast.login_required': 'Inicia sesión para guardar favoritos',
         'modal.wiki': 'Leer en Wikipedia',
         'load_more': 'Cargar más',
         'load_more_loading': 'Cargando…',
@@ -153,7 +175,7 @@ const i18n = {
         'nav.reptiles': 'Reptiles', 'nav.acuaticos': 'Aquatic', 'nav.favoritos': 'Favorites',
         'hero.title': 'Discover the Animal Kingdom',
         'hero.desc': 'Explore the fascinating diversity of species that inhabit our planet. From majestic mammals to the colorful inhabitants of the ocean.',
-        'search.placeholder': 'Search animal by name…',
+        'search.placeholder': 'Search animal by name…', 'search.empty': 'No animals found with that name.',
         'stat.species': 'Known species', 'stat.years': 'Million years',
         'stat.classes': 'Main classes', 'stat.water': '% of planet water',
         'filter.all': 'All', 'filter.mamiferos': '🐘 Mammals', 'filter.aves': '🦅 Birds',
@@ -229,6 +251,7 @@ const i18n = {
         'curiosity.4.desc': 'The Turritopsis dohrnii jellyfish is considered "biologically immortal" as it can reverse its life cycle.',
         'footer.desc': 'Exploring the diversity of life on Earth.',
         'footer.categories': 'Categories',
+        'footer.contact': 'Contact',
         'footer.copyright': '© 2026 Wildpedia. Made with ❤️ by @adlopp for nature lovers.',
         'toast.added': '❤️ Added to favorites',
         'toast.removed': '💔 Removed from favorites',
@@ -238,6 +261,20 @@ const i18n = {
         'wiki.btn': '🎲 New fact',
         'wiki.loading': 'Searching Wikipedia…',
         'wiki.error': "Couldn't find an animal fact. Try again!",
+        'auth.login.title': 'Log In', 'auth.register.title': 'Sign Up',
+        'auth.username': 'Username', 'auth.email': 'Email', 'auth.password': 'Password', 'auth.confirm': 'Confirm Password',
+        'auth.login_btn': 'Log In', 'auth.register_btn': 'Sign Up',
+        'auth.no_account': "Don't have an account?", 'auth.has_account': 'Already have an account?',
+        'auth.register_link': 'Sign Up', 'auth.login_link': 'Log In',
+        'auth.error_exists': 'User already exists', 'auth.error_credentials': 'Invalid username or password',
+        'auth.error_passwords': 'Passwords do not match',         'auth.error_empty': 'Fill in all fields',
+        'auth.error_minlength': 'Username and password must be at least 4 characters',
+        'auth.error_username_chars': 'Username can only contain letters (no accents), numbers and underscores',
+        'auth.logout_btn': 'Log out', 'auth.delete_btn': 'Delete account',
+        'auth.delete_confirm': 'Enter your password to delete the account.',
+        'auth.deleted': 'Account deleted',
+        'auth.cancel': 'Cancel',
+        'toast.login_required': 'Log in to save favorites',
         'modal.wiki': 'Read on Wikipedia',
         'load_more': 'Load more',
         'load_more_loading': 'Loading…',
@@ -388,6 +425,10 @@ function saveFavorites(favs) {
 }
 
 function toggleFavorite(key) {
+    if (!isLoggedIn()) {
+        showToast(t('toast.login_required'));
+        return;
+    }
     const favs = getFavorites();
     const idx = favs.indexOf(key);
     if (idx === -1) {
@@ -410,19 +451,26 @@ function isFavorite(key) {
 function updateFavButtons() {
     document.querySelectorAll('.fav-btn').forEach(btn => {
         const key = btn.dataset.animal;
-        btn.classList.toggle('active', isFavorite(key));
-        btn.textContent = isFavorite(key) ? '♥' : '♡';
+        const fav = isLoggedIn() && isFavorite(key);
+        btn.classList.toggle('active', fav);
+        btn.textContent = fav ? '♥' : '♡';
     });
 }
 
 function renderFavorites() {
-    const favs = getFavorites();
     favoritesGrid.innerHTML = '';
-    if (favs.length === 0) {
+    if (!isLoggedIn()) {
         emptyFavs.style.display = 'block';
+        emptyFavs.querySelector('p').textContent = t('toast.login_required');
+        return;
+    }
+    if (getFavorites().length === 0) {
+        emptyFavs.style.display = 'block';
+        emptyFavs.querySelector('p').textContent = t('section.favoritos.empty');
         return;
     }
     emptyFavs.style.display = 'none';
+    const favs = getFavorites();
     favs.forEach(key => {
         const existing = document.querySelector(`.animal-card[data-animal="${key}"]`);
         if (existing) {
@@ -533,7 +581,9 @@ function buildCardElement(key) {
     const card = document.createElement('article');
     card.className = 'animal-card';
     card.dataset.animal = key;
-    const imgHtml = data.img ? `<img src="${data.img.replace('w=600&h=400', 'w=400&h=300')}" alt="${name}" loading="lazy">` : '';
+    const imgHtml = data.img
+        ? `<img src="${data.img.replace('w=600&h=400', 'w=400&h=300')}" alt="${name}" loading="lazy">`
+        : `<img src="" alt="${name}" loading="lazy" style="display:none">`;
     card.innerHTML = `
         <button class="fav-btn" data-animal="${key}" aria-label="Añadir a favoritos">♡</button>
         <div class="card-image" style="background:linear-gradient(135deg,${randomGradient()})">
@@ -566,13 +616,13 @@ function buildCardElement(key) {
 }
 
 function createAnimalCard(key, category) {
-    const grid = document.querySelector(`section[data-category="${category}"] .card-grid`);
-    if (!grid) return;
+    const track = document.querySelector(`section[data-category="${category}"] .carousel-track`);
+    if (!track) return;
 
     const card = buildCardElement(key);
     if (!card) return;
 
-    grid.appendChild(card);
+    track.appendChild(card);
 
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
@@ -583,35 +633,51 @@ function createAnimalCard(key, category) {
     });
 }
 
-function showCategoryCards(category, start) {
+function showCategoryCards(category) {
     const list = CATEGORY_ORDER[category];
     if (!list) return;
-    const grid = document.querySelector(`section[data-category="${category}"] .card-grid`);
-    if (!grid) return;
-    grid.innerHTML = '';
-    for (let i = 0; i < 3; i++) {
-        const key = list[(start + i) % list.length];
-        createAnimalCard(key, category);
-    }
+    const track = document.querySelector(`section[data-category="${category}"] .carousel-track`);
+    if (!track) return;
+    track.innerHTML = '';
+    list.forEach(key => createAnimalCard(key, category));
 }
 
-function initCategoryLoadMore() {
-    const startIndex = {};
+function initCategories() {
     document.querySelectorAll('.category-section[data-category]').forEach(section => {
         const category = section.dataset.category;
         if (category === 'favorites') return;
-        startIndex[category] = 0;
-        showCategoryCards(category, 0);
 
-        const btn = document.createElement('button');
-        btn.className = 'load-more-btn';
-        btn.textContent = t('load_more');
-        btn.addEventListener('click', () => {
-            startIndex[category] = (startIndex[category] + 3) % 12;
-            showCategoryCards(category, startIndex[category]);
-            renderFavorites();
-        });
-        section.appendChild(btn);
+        const grid = section.querySelector('.card-grid');
+        if (!grid || grid.closest('.carousel')) return;
+
+        grid.classList.add('carousel-track');
+
+        const carousel = document.createElement('div');
+        carousel.className = 'carousel';
+        grid.parentNode.insertBefore(carousel, grid);
+        carousel.appendChild(grid);
+
+        const prev = document.createElement('button');
+        prev.className = 'carousel-btn prev';
+        prev.textContent = '◀';
+        const next = document.createElement('button');
+        next.className = 'carousel-btn next';
+        next.textContent = '▶';
+        carousel.appendChild(prev);
+        carousel.appendChild(next);
+
+        const scroll = (dir) => {
+            const card = grid.querySelector('.animal-card');
+            if (!card) return;
+            const gap = parseInt(getComputedStyle(grid).gap) || 24;
+            const step = card.offsetWidth + gap;
+            grid.scrollBy({ left: dir * step, behavior: 'smooth' });
+        };
+
+        prev.addEventListener('click', () => scroll(-1));
+        next.addEventListener('click', () => scroll(1));
+
+        showCategoryCards(category);
     });
     renderFavorites();
     updateFavButtons();
@@ -627,7 +693,8 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.textContent = '☀️';
     }
 
-    initCategoryLoadMore();
+    initCategories();
+    updateAuthUI();
 });
 
 document.addEventListener('error', e => {
@@ -693,8 +760,13 @@ document.addEventListener('keydown', e => {
 });
 
 // Search
+const searchSuggestions = document.getElementById('searchSuggestions');
+
 searchInput.addEventListener('input', () => {
     const term = searchInput.value.toLowerCase().trim();
+
+    document.querySelectorAll('.animal-card.highlighted').forEach(c => c.classList.remove('highlighted'));
+
     document.querySelectorAll('.animal-card').forEach(card => {
         const name = card.querySelector('h3').textContent.toLowerCase();
         const sci = card.querySelector('.scientific').textContent.toLowerCase();
@@ -702,6 +774,71 @@ searchInput.addEventListener('input', () => {
         card.classList.toggle('hidden', term && !text.includes(term));
     });
     applyFilter();
+
+    const searchEmpty = document.getElementById('searchEmpty');
+    const visible = document.querySelectorAll('.animal-card:not(.hidden)');
+    searchEmpty.style.display = term && visible.length === 0 ? 'block' : 'none';
+
+    if (!term) {
+        searchSuggestions.classList.remove('active');
+        return;
+    }
+
+    const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const nterm = normalize(term);
+
+    const matches = [];
+    document.querySelectorAll('.animal-card:not(.hidden)').forEach(card => {
+        const name = card.querySelector('h3').textContent;
+        const sci = card.querySelector('.scientific').textContent;
+        const nname = normalize(name);
+        const nsci = normalize(sci);
+        let score = 0;
+        if (nname.startsWith(nterm)) score = 4;
+        else if (nsci.startsWith(nterm)) score = 3;
+        else if (nname.includes(nterm)) score = 2;
+        else if (nsci.includes(nterm)) score = 1;
+        if (score) matches.push({ key: card.dataset.animal, name, sci, score });
+    });
+
+    matches.sort((a, b) => b.score - a.score);
+
+    if (matches.length === 0 || matches.length > 12) {
+        searchSuggestions.classList.remove('active');
+        return;
+    }
+
+    searchSuggestions.innerHTML = matches.map(m =>
+        `<li data-animal="${m.key}">${m.name} <span>${m.sci}</span></li>`
+    ).join('');
+    searchSuggestions.classList.add('active');
+});
+
+searchSuggestions.addEventListener('click', e => {
+    const li = e.target.closest('li');
+    if (!li) return;
+    const key = li.dataset.animal;
+    const card = document.querySelector(`.animal-card[data-animal="${key}"]`);
+    if (!card) return;
+    searchInput.value = card.querySelector('h3').textContent;
+    searchSuggestions.classList.remove('active');
+
+    const term = searchInput.value.toLowerCase().trim();
+    document.querySelectorAll('.animal-card').forEach(c => {
+        const n = c.querySelector('h3').textContent.toLowerCase();
+        const s = c.querySelector('.scientific').textContent.toLowerCase();
+        c.classList.toggle('hidden', !n.includes(term) && !s.includes(term));
+    });
+    applyFilter();
+
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('highlighted');
+});
+
+document.addEventListener('click', e => {
+    if (!e.target.closest('.search-container')) {
+        searchSuggestions.classList.remove('active');
+    }
 });
 
 // Filter pills
@@ -743,7 +880,7 @@ function applyFilter() {
                 if (!card.classList.contains('hidden')) show = true;
             }
         });
-        section.classList.toggle('hidden', filter !== 'favorites' && !show);
+        section.classList.toggle('hidden', filter === 'favorites' || !show);
     });
 
     const favSection = document.getElementById('favorites-section');
@@ -754,6 +891,44 @@ function applyFilter() {
 randomBtn.addEventListener('click', () => {
     const keys = Object.keys(animals);
     openModal(keys[Math.floor(Math.random() * keys.length)]);
+});
+
+// Auth
+authBtn.addEventListener('click', () => {
+    if (isLoggedIn()) {
+        showProfileForm();
+    } else {
+        showAuthForm();
+    }
+});
+
+authModalClose.addEventListener('click', () => {
+    authModal.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+authModalBody.addEventListener('click', e => {
+    const toggle = e.target.closest('.password-toggle');
+    if (toggle) {
+        const input = toggle.parentElement.querySelector('input');
+        const isPass = input.type === 'password';
+        input.type = isPass ? 'text' : 'password';
+        toggle.textContent = isPass ? '🙈' : '👁';
+    }
+});
+
+authModal.addEventListener('click', e => {
+    if (e.target === authModal) {
+        authModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && authModal.classList.contains('active')) {
+        authModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
 
 // Counter animation
@@ -833,4 +1008,241 @@ async function fetchWikiFact() {
     }
 
     wikiFactBtn.disabled = false;
+}
+
+// Auth
+function getUsers() {
+    try { return JSON.parse(localStorage.getItem(AUTH_USERS_KEY)) || []; }
+    catch { return []; }
+}
+
+function saveUsers(users) {
+    localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users));
+}
+
+function getSession() {
+    return localStorage.getItem(AUTH_SESSION_KEY);
+}
+
+function setSession(username) {
+    if (username) localStorage.setItem(AUTH_SESSION_KEY, username);
+    else localStorage.removeItem(AUTH_SESSION_KEY);
+}
+
+function isLoggedIn() {
+    return !!getSession();
+}
+
+function register(username, email, password) {
+    const users = getUsers();
+    if (users.find(u => u.username === username)) return { ok: false, error: t('auth.error_exists') };
+    if (!username || !email || !password) return { ok: false, error: t('auth.error_empty') };
+    if (username.length < 4 || password.length < 4) return { ok: false, error: t('auth.error_minlength') };
+    if (!/^[a-zA-Z0-9_]+$/.test(username)) return { ok: false, error: t('auth.error_username_chars') };
+    users.push({ username, email, password });
+    saveUsers(users);
+    return { ok: true };
+}
+
+function login(username, password) {
+    if (!username || !password) return { ok: false, error: t('auth.error_empty') };
+    const users = getUsers();
+    const user = users.find(u => u.username === username && u.password === password);
+    if (!user) return { ok: false, error: t('auth.error_credentials') };
+    setSession(username);
+    return { ok: true };
+}
+
+function logout() {
+    setSession(null);
+    updateAuthUI();
+    updateFavButtons();
+    renderFavorites();
+    showToast('👋 ' + t('auth.logout_btn'));
+}
+
+function updateAuthUI() {
+    const session = getSession();
+    if (session) {
+        authBtn.textContent = '👤 ' + session;
+        authBtn.classList.add('logged-in');
+        authBtn.title = session;
+    } else {
+        authBtn.textContent = '👤';
+        authBtn.classList.remove('logged-in');
+        authBtn.title = t('auth.login.title');
+    }
+}
+
+function showProfileForm() {
+    const session = getSession();
+
+    function showDeleteConfirm() {
+        authModalBody.innerHTML = `
+            <div class="auth-form" style="text-align:center">
+                <h2>🔐 ${t('auth.delete_btn')}</h2>
+                <p style="color:var(--text-secondary);margin-bottom:24px">${t('auth.delete_confirm')}</p>
+                <div class="form-group">
+                    <input type="password" id="deletePass" placeholder="${t('auth.password')}" required>
+                </div>
+                <button class="auth-submit" id="deleteConfirm" style="background:#dc2626">${t('auth.delete_btn')}</button>
+                <button class="auth-link" id="deleteCancel" style="margin-top:12px;display:block;width:100%">${t('auth.cancel')}</button>
+            </div>
+        `;
+
+        document.getElementById('deleteConfirm').addEventListener('click', () => {
+            const pass = document.getElementById('deletePass').value;
+            const users = getUsers();
+            const user = users.find(u => u.username === session);
+            if (!user || user.password !== pass) {
+                document.getElementById('deletePass').focus();
+                document.getElementById('deletePass').style.outline = '2px solid #dc2626';
+                return;
+            }
+            saveUsers(users.filter(u => u.username !== session));
+            logout();
+            authModal.classList.remove('active');
+            document.body.style.overflow = '';
+            showToast('🗑️ ' + t('auth.deleted'));
+        });
+
+        document.getElementById('deleteCancel').addEventListener('click', showProfileForm);
+
+        document.getElementById('deletePass').addEventListener('keydown', e => {
+            if (e.key === 'Enter') document.getElementById('deleteConfirm').click();
+        });
+
+        setTimeout(() => document.getElementById('deletePass').focus(), 100);
+    }
+
+    authModalBody.innerHTML = `
+        <div class="auth-form" style="text-align:center">
+            <h2>👤 ${session}</h2>
+            <p style="color:var(--text-secondary);margin-bottom:24px">${t('section.favoritos.empty')}</p>
+            <button class="auth-submit" id="profileLogout" style="margin-bottom:12px">${t('auth.logout_btn')}</button>
+            <button class="auth-submit" id="profileDelete" style="background:#dc2626">${t('auth.delete_btn')}</button>
+        </div>
+    `;
+    authModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    document.getElementById('profileLogout').addEventListener('click', () => {
+        authModal.classList.remove('active');
+        document.body.style.overflow = '';
+        logout();
+    });
+
+    document.getElementById('profileDelete').addEventListener('click', showDeleteConfirm);
+}
+
+function showAuthForm() {
+    authModalBody.innerHTML = `
+        <div class="auth-form">
+            <h2>${t('auth.login.title')}</h2>
+            <div id="authError"></div>
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="authUser">${t('auth.username')}</label>
+                    <input type="text" id="authUser" placeholder="${t('auth.username')}" required>
+                </div>
+                <div class="form-group">
+                    <label for="authPass">${t('auth.password')}</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="authPass" placeholder="${t('auth.password')}" required>
+                        <button type="button" class="password-toggle" aria-label="Mostrar contraseña">👁</button>
+                    </div>
+                </div>
+                <button type="submit" class="auth-submit">${t('auth.login_btn')}</button>
+            </form>
+            <div class="auth-toggle">
+                ${t('auth.no_account')} <a id="authToggleLink">${t('auth.register_link')}</a>
+            </div>
+        </div>
+    `;
+    authModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    document.getElementById('authForm').addEventListener('submit', e => {
+        e.preventDefault();
+        const user = document.getElementById('authUser').value.trim();
+        const pass = document.getElementById('authPass').value;
+        const result = login(user, pass);
+        if (result.ok) {
+            authModal.classList.remove('active');
+            document.body.style.overflow = '';
+            updateAuthUI();
+            updateFavButtons();
+            renderFavorites();
+            showToast('👋 ' + t('auth.login_btn') + ', ' + user + '!');
+        } else {
+            document.getElementById('authError').innerHTML = `<div class="auth-error">${result.error}</div>`;
+        }
+    });
+
+    document.getElementById('authToggleLink').addEventListener('click', showRegisterForm);
+}
+
+function showRegisterForm() {
+    authModalBody.innerHTML = `
+        <div class="auth-form">
+            <h2>${t('auth.register.title')}</h2>
+            <div id="authError"></div>
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="authUser">${t('auth.username')}</label>
+                    <input type="text" id="authUser" placeholder="${t('auth.username')}" required>
+                </div>
+                <div class="form-group">
+                    <label for="authEmail">${t('auth.email')}</label>
+                    <input type="email" id="authEmail" placeholder="${t('auth.email')}" required>
+                </div>
+                <div class="form-group">
+                    <label for="authPass">${t('auth.password')}</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="authPass" placeholder="${t('auth.password')}" required>
+                        <button type="button" class="password-toggle" aria-label="Mostrar contraseña">👁</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="authConfirm">${t('auth.confirm')}</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="authConfirm" placeholder="${t('auth.confirm')}" required>
+                        <button type="button" class="password-toggle" aria-label="Mostrar contraseña">👁</button>
+                    </div>
+                </div>
+                <button type="submit" class="auth-submit">${t('auth.register_btn')}</button>
+            </form>
+            <div class="auth-toggle">
+                ${t('auth.has_account')} <a id="authToggleLink">${t('auth.login_link')}</a>
+            </div>
+        </div>
+    `;
+    authModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    document.getElementById('authForm').addEventListener('submit', e => {
+        e.preventDefault();
+        const user = document.getElementById('authUser').value.trim();
+        const email = document.getElementById('authEmail').value.trim();
+        const pass = document.getElementById('authPass').value;
+        const confirm = document.getElementById('authConfirm').value;
+        if (pass !== confirm) {
+            document.getElementById('authError').innerHTML = `<div class="auth-error">${t('auth.error_passwords')}</div>`;
+            return;
+        }
+        const result = register(user, email, pass);
+        if (result.ok) {
+            login(user, pass);
+            authModal.classList.remove('active');
+            document.body.style.overflow = '';
+            updateAuthUI();
+            updateFavButtons();
+            renderFavorites();
+            showToast('🎉 ' + t('auth.register_btn') + ', ' + user + '!');
+        } else {
+            document.getElementById('authError').innerHTML = `<div class="auth-error">${result.error}</div>`;
+        }
+    });
+
+    document.getElementById('authToggleLink').addEventListener('click', showAuthForm);
 }

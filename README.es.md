@@ -9,14 +9,20 @@ Proyecto frontend **vanilla** (sin frameworks, sin build tools).
 
 | Funcionalidad | Detalle |
 |---|---|
-| 🔍 **Buscador en tiempo real** | Filtra 16 animales por nombre mientras escribes |
+| 🔍 **Buscador en tiempo real** | Filtra 16 animales por nombre, sugerencias con orden por relevancia |
 | 🏷️ **Filtros por categoría** | Mamíferos, Aves, Reptiles, Acuáticos + Favoritos |
-| ❤️ **Favoritos persistentes** | Guarda en localStorage, sección dedicada |
+| ❤️ **Favoritos persistentes** | Guarda en localStorage, requiere inicio de sesión, sección dedicada |
 | 🌙 **Modo oscuro** | Persiste en localStorage |
 | 🌐 **Idioma ES/EN** | Traducción completa, persiste en localStorage |
 | 🎲 **Animal aleatorio** | Modal sorpresa con un clic |
 | 📱 **Responsive** | 3 breakpoints: desktop, tablet, móvil |
 | 🎬 **Animaciones** | Fade-in con IntersectionObserver, contadores animados |
+| 🔐 **Login demo** | Registro/inicio de sesión con validación, sesión en localStorage |
+| 👁️ **Toggle contraseña** | Botón mostrar/ocultar en campos de contraseña |
+| 🗑️ **Gestión de cuenta** | Cerrar sesión y eliminar cuenta (con reingreso de contraseña) |
+| 🔄 **Carrusel** | Flechas ◀ ▶ para deslizar tarjetas por categoría |
+| 🎯 **Sin resultados** | Mensaje amigable cuando no hay coincidencias en búsqueda |
+| 🌍 **Footer de contacto** | Email y teléfono en el pie de página |
 
 ## 🚀 Vista previa
 
@@ -34,14 +40,6 @@ O con servidor local:
 npx serve .
 ```
 
-O con Docker:
-
-```sh
-docker build -t wildpedia .
-docker run -p 8080:80 wildpedia
-# Abrir http://localhost:8080
-```
-
 ## 🗂️ Estructura
 
 ```
@@ -57,6 +55,9 @@ docker run -p 8080:80 wildpedia
 ├── package.json
 └── AGENTS.md        # Instrucciones para OpenCode
 ```
+
+> Todos los datos (favoritos, tema, idioma, usuarios) se guardan en el `localStorage` del navegador.  
+> El registro / inicio de sesión es solo del lado del cliente (demo). No se envía nada a ningún servidor.
 
 ## 🧠 Lo que demuestra
 
