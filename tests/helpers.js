@@ -31,6 +31,7 @@ function setupGlobalDOM(html) {
 
             <div class="search-container">
                 <input type="text" id="searchInput" data-i18n="search.placeholder" placeholder="Buscar animal por nombre…">
+                <button class="search-clear" id="searchClear">✕</button>
                 <ul class="search-suggestions" id="searchSuggestions"></ul>
             </div>
 

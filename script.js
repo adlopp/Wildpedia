@@ -761,9 +761,22 @@ document.addEventListener('keydown', e => {
 
 // Search
 const searchSuggestions = document.getElementById('searchSuggestions');
+const searchClear = document.getElementById('searchClear');
+
+function updateSearchUI(term) {
+    document.querySelectorAll('.carousel-btn').forEach(b => b.style.display = term ? 'none' : '');
+    searchClear.classList.toggle('visible', !!term);
+}
+
+searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.focus();
+});
 
 searchInput.addEventListener('input', () => {
     const term = searchInput.value.toLowerCase().trim();
+    updateSearchUI(term);
 
     document.querySelectorAll('.animal-card.highlighted').forEach(c => c.classList.remove('highlighted'));
 
@@ -803,12 +816,12 @@ searchInput.addEventListener('input', () => {
 
     matches.sort((a, b) => b.score - a.score);
 
-    if (matches.length === 0 || matches.length > 12) {
+    if (matches.length === 0) {
         searchSuggestions.classList.remove('active');
         return;
     }
 
-    searchSuggestions.innerHTML = matches.map(m =>
+    searchSuggestions.innerHTML = matches.slice(0, 12).map(m =>
         `<li data-animal="${m.key}">${m.name} <span>${m.sci}</span></li>`
     ).join('');
     searchSuggestions.classList.add('active');

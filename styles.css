@@ -273,6 +273,31 @@ body {
     pointer-events: none;
 }
 
+.search-clear {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px 6px;
+    display: none;
+    line-height: 1;
+    z-index: 5;
+    transition: color var(--transition);
+}
+
+.search-clear:hover {
+    color: var(--text-primary);
+}
+
+.search-clear.visible {
+    display: block;
+}
+
 .search-suggestions {
     position: absolute;
     top: calc(100% + 4px);
