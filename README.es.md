@@ -26,7 +26,9 @@ Proyecto frontend **vanilla** (sin frameworks, sin build tools).
 
 ## 🚀 Vista previa
 
-Abrir directo en el navegador:
+🌐 **Web:** [https://adlopp.github.io/Wildpedia/](https://adlopp.github.io/Wildpedia/)
+
+O abre directo en el navegador:
 
 ```sh
 explorer.exe index.html        # Windows (WSL)

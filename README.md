@@ -26,7 +26,9 @@ Visual explorer of the animal kingdom with search, filters, favorites, and dark 
 
 ## 🚀 Preview
 
-Open directly in the browser:
+🌐 **Live:** [https://adlopp.github.io/Wildpedia/](https://adlopp.github.io/Wildpedia/)
+
+Or open directly in the browser:
 
 ```sh
 explorer.exe index.html        # Windows (WSL)
